@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        .table-container {
+            padding: 50px;
+            box-sizing: border-box;
+        }
+
+        .table {
+            display: table;
+            width: 100%;
+            height: 100%;
+            border-collapse: separate;
+            border-spacing: 50px;
+
+        }
+
+        .row {
+            display: table-row;
+        }
+
+        .cell {
+            display: table-cell;
+            position: relative;
+            padding: 10px;
+            border: 1px solid #ddd;
+            width: 33.33%;
+        }
+
+        .cell:hover::before {
+            content: attr(data-tooltip);
+            /* Display the data-tooltip content */
+            position: absolute;
+            top: -30px;
+            /* Adjust the distance from the top of the cell */
+            right: 0;
+            background-color: #123456;
+            color: #ffffff;
+            padding: 5px;
+            border-radius: 5px;
+            display: inline-block;
+            white-space: nowrap;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="table-container">
+        <div class="table">
+
+            <!-- Header-->
+            <div class="row">
+                <div class="cell" data-tooltip="Tooltip 1">Header, Cell 1</div>
+                <div class="cell" data-tooltip="Tooltip 2">Header, Cell 2</div>
+                <div class="cell" data-tooltip="Tooltip 3">Header, Cell 3</div>
+            </div>
+
+            <!-- Row 1 -->
+            <div class="row">
+                <div class="cell" data-tooltip="Tooltip 4">Row 1, Cell 1</div>
+                <div class="cell" data-tooltip="Tooltip 5">Row 1, Cell 2</div>
+                <div class="cell" data-tooltip="Tooltip 6">Row 1, Cell 3</div>
+            </div>
+
+            <!-- Row 2 -->
+            <div class="row">
+                <div class="cell" data-tooltip="Tooltip 7">Row 2, Cell 1</div>
+                <div class="cell" data-tooltip="Tooltip 8">Row 2, Cell 2</div>
+                <div class="cell" data-tooltip="Tooltip 9">Row 2, Cell 3</div>
+            </div>
+
+            <!-- Row 3 -->
+            <div class="row">
+                <div class="cell" data-tooltip="Tooltip 10">Row 3, Cell 1</div>
+                <div class="cell" data-tooltip="Tooltip 11">Row 3, Cell 2</div>
+                <div class="cell" data-tooltip="Tooltip 12">Row 3, Cell 3</div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
